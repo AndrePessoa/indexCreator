@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Creator</title>
+
+	<style>
+		code {
+			margin-top: 10px;
+			max-height: 150px;
+			overflow: auto;
+			display: block;
+		}
+		li {
+			margin-bottom: 15px;
+			list-style-type: decimal-leading-zero;
+		}
+
+		output {
+			background: #444;
+			display: table;
+			color: white;
+			margin-top: 10px;
+			padding: 0 10px;
+		}
+
+		output strong {
+			color: #d6d87a;
+		}
+
+		#progress_bar {
+			margin: 10px 0;
+			padding: 3px;
+			border: 1px solid #000;
+			font-size: 14px;
+			clear: both;
+			opacity: 0;
+			-moz-transition: opacity 1s linear;
+			-o-transition: opacity 1s linear;
+			-webkit-transition: opacity 1s linear;
+		}
+		#progress_bar.loading {
+			opacity: 1.0;
+		}
+		#progress_bar .percent {
+			background-color: #99ccff;
+			height: auto;
+			width: 0;
+		}
+		div#drop_zone {
+			border: 1px solid #ccc;
+			padding: 25px;
+			text-align: center;
+			color: #777;
+		}
+	</style>
+
+</head>
+<body>
+	<form>
+		<input type="file" id="files" name="file[]" multiple />
+		<input type="button" id="download" name="download" value="Download" />
+	</form>
+
+	<div id="progress_bar"><div class="percent">0%</div></div>
+
+	<div id="drop_zone">Drop files here</div>
+	<output>
+		<ul id="list"></ul>
+	</output>
+
+	<script>
+	</script>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
